@@ -1,0 +1,58 @@
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-family: "Songti SC", "Noto Serif CJK SC", "SimSun", "STSong", Georgia, serif; }
+        body { background: #0c0a09; color: #fef3c7; line-height: 1.8; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; transition: all 0.25s ease; }
+        img, svg { max-width: 100%; height: auto; }
+        .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        .motion-art-frame { width: 100%; min-height: 320px; display: flex; align-items: center; justify-content: center; }
+        .motion-svg { width: 100%; height: auto; max-height: 360px; filter: drop-shadow(0 15px 35px rgba(217,119,6,0.3)); }
+
+        .brocade-nav { background: rgba(12, 10, 9, 0.95); border-bottom: 2px solid #b45309; position: sticky; top: 0; z-index: 100; }
+        .brocade-nav-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+        .brocade-logo { font-size: 24px; font-weight: 900; color: #fbbf24; display: flex; align-items: center; gap: 10px; letter-spacing: 2px; }
+        .brocade-logo-seal { background: #b45309; color: #fef3c7; padding: 2px 10px; border-radius: 2px; font-size: 14px; border: 1px solid #fbbf24; }
+        .brocade-menu { display: flex; gap: 28px; list-style: none; }
+        .brocade-menu a { font-size: 15px; color: #d4b996; letter-spacing: 1px; }
+        .brocade-menu a:hover, .brocade-menu a.active { color: #fbbf24; text-shadow: 0 0 10px rgba(251,191,36,0.4); }
+
+        .btn-aff-cta { display: inline-flex; align-items: center; justify-content: center; padding: 13px 30px; font-weight: 700; font-size: 15px; border-radius: 4px; background: linear-gradient(135deg, #d97706, #fbbf24); color: #000; border: 1px solid #fef08a; box-shadow: 0 4px 20px rgba(217,119,6,0.4); cursor: pointer; }
+        .btn-aff-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(251,191,36,0.6); }
+        .btn-tizi-dofollow { display: inline-flex; align-items: center; justify-content: center; padding: 12px 28px; font-weight: 600; font-size: 15px; border-radius: 4px; border: 1px solid #b45309; background: #1c1815; color: #fbbf24; margin-left: 16px; }
+        .btn-tizi-dofollow:hover { border-color: #fbbf24; background: #261f1a; }
+
+        .hero-section { padding: 75px 0 65px; border-bottom: 1px solid #292017; }
+        .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
+        .hero-tag { display: inline-block; padding: 4px 16px; background: #1c1815; border: 1px solid #b45309; border-radius: 2px; font-size: 13px; color: #fbbf24; margin-bottom: 22px; letter-spacing: 1px; }
+        .hero-title { font-size: 38px; line-height: 1.3; font-weight: 900; margin-bottom: 20px; color: #fff; letter-spacing: 1px; }
+        .hero-title-highlight { color: #fbbf24; text-shadow: 0 0 25px rgba(251,191,36,0.35); }
+        .hero-desc { font-size: 16px; color: #d4b996; margin-bottom: 32px; line-height: 1.85; }
+        .hero-actions { display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+
+        .brocade-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 45px; }
+        .brocade-card { background: #181411; border: 1px solid #3a2d1d; border-radius: 4px; padding: 30px 24px; position: relative; }
+        .brocade-card::before { content: '◈'; position: absolute; top: 12px; right: 14px; color: #b45309; font-size: 12px; }
+        .brocade-card h3 { font-size: 18px; color: #fbbf24; margin-bottom: 12px; font-weight: 800; }
+
+        .pricing-section { padding: 70px 0; background: #080706; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+        .price-card { background: #181411; border: 1px solid #3a2d1d; border-radius: 4px; padding: 36px 24px; text-align: center; position: relative; }
+        .price-card.featured { border-color: #fbbf24; box-shadow: 0 0 35px rgba(251,191,36,0.18); }
+        .price-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #b45309; color: #fff; font-size: 12px; font-weight: 800; padding: 3px 14px; border: 1px solid #fbbf24; }
+        .price-amount { font-size: 36px; font-weight: 900; color: #fbbf24; margin: 16px 0; }
+
+        .brocade-footer { background: #060505; border-top: 2px solid #3a2d1d; padding: 60px 0 30px; margin-top: 70px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .footer-col h4 { font-size: 16px; color: #fbbf24; margin-bottom: 16px; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 10px; font-size: 14px; color: #d4b996; }
+        .footer-bottom { text-align: center; font-size: 13px; color: #78716c; padding-top: 24px; border-top: 1px solid #292524; }
+
+        @media (max-width: 860px) {
+          .hero-grid, .pricing-grid, .brocade-features, .footer-grid { grid-template-columns: 1fr; }
+          .brocade-menu { flex-wrap: wrap; gap: 14px; }
+          .hero-title { font-size: 27px; }
+          .btn-aff-cta, .btn-tizi-dofollow { width: 100%; margin-left: 0 !important; margin-bottom: 12px; }
+        }
+        
